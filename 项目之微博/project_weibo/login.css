@@ -1,0 +1,131 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+    background-color: #F8F8F8;
+    outline: none;
+}
+.xx{
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    font-size:30px;
+    font-weight: lighter;
+    color: #666666;
+}
+.input-wrapper{
+	overflow: hidden;
+}
+.input-wrapper .icon-forName{
+	display: inline-block;
+	background: url(img/11.png) no-repeat 0 0;
+	width: 23px;
+	height: 22px;
+	background-size: 23px auto;
+	vertical-align: baseline;
+	float: left;
+	margin-top: 7px;
+}
+.input-box{
+	float: left;
+}
+.icon-forPwd{
+	display: inline-block;
+	background: url(img/12.png) no-repeat 0 0;
+	width: 23px;
+	height: 22px;
+	background-size: 23px auto;
+	vertical-align: baseline;
+	float: left;
+	margin-top: 7px;
+}
+.login-wrapper .input-wrapper input {
+    padding-right: 35px;
+    float: left;
+}
+.login-wrapper .box input {
+    display: block;
+    border: none;
+    padding: 12px 50px 12px 25px;
+    width: 100%;
+    font-size: .9275rem;
+    background: white;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.login-wrapper .input-wrapper:nth-child(1){
+    overflow: hidden;
+    margin: 0 16px;
+    border-bottom: #dddddd solid 1px;
+}
+.login-wrapper .input-wrapper:nth-child(2){
+    overflow: hidden;
+    margin: 0 16px;
+}
+.avatar-wrapper {
+    overflow: hidden;
+    margin: 80px auto 0;
+    border: rgba(0, 0, 0, 0.1) solid 1px;
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-image: url(img/default-avatar_2x.png);
+    background-size: 100% 100%;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.17);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.17);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.17);
+    margin-bottom: 20px;
+}
+.login-wrapper .box {
+    position: relative;
+    border: #d7d7d7 solid 1px;
+    border-left: none;
+    border-right: none;
+    background: white;
+}
+.dVerifyCodeWrapper{
+	
+}
+.login-wrapper form .btn {
+    /*margin: 20px 16px 15px;*/
+   margin-top: 20px;
+}
+.btn.btnRed {
+	display: block;
+	width: 90%;
+	padding: 10px;
+    border-color: #e86b0f;
+    color: white;
+    background: #ff8200;
+    margin: 0 auto;
+    text-decoration: none;
+    text-align: center;
+}
+.login-wrapper .label {
+    margin: 27px 0 0;
+    font-size: .875rem;
+    text-align: center;
+}
+.login-wrapper .label >a{
+	color: #7c7c7c;
+	text-decoration: none;
+}
+.login-wrapper .footer {
+    padding: 20px 0 20px;
+    width: 100%;
+    font-size: .875rem;
+    text-align: center;
+}
+.login-wrapper .footer>a{
+	color: #5184BC;
+	text-decoration: none;
+	margin-right: 10px;
+	padding-right: 10px;
+}
+.login-wrapper .footer>a:nth-child(1){
+	border-right: 1px solid #CCCCCC;
+}

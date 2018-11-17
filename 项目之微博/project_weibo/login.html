@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="login.css"/>
+        <style>
+            #errorMsg{
+                display: none;
+                padding-left: 5px;
+                color: red;
+            }
+
+        </style>
+	</head>
+	<body>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="zepto.min.js"></script>
+    <script src="zepto.touch.js"></script>
+    <script src="shouYe.js"></script>
+    <script>
+        $(function () {
+            //点击关注弹出登录
+            $(".xx").on("tap",function () {
+                location.href="shouYe.html";
+            });
+
+            $(".btn").on("tap",function () {
+
+                $.ajax({
+                    type: "POST",
+                    url: "denglu.php",
+                    dataType: "json",
+                    data: {
+                        emailAddress: $("#loginName").val(),
+                        pass: $("#loginPassword").val(),
+                    },
+                    success: function (res) {
+                       res["data"].forEach(function (item) {
+                           var email=item["emailAddress"];
+                           // console.log(email);
+                           var pass=item["pass"];
+                           var Semail= $("#loginName").val();
+                           var Spass=$("#loginPassword").val();
+                           // console.log(Semail,Spass);
+                           if (email!=Semail||pass!=Spass){
+                               $("#errorMsg").show();
+                           }else{
+                               $("#errorMsg").hide();
+                               // alert("账号或者密码不正确，请重新输入");
+                               var wBemail= $("#loginName").val();
+                               console.log(wBemail);
+                               localStorage["emailAddress"]=wBemail;
+                               location.href = "login_shouye.html";
+                           }
+                       })
+                    }
+                });
+            })
+        })
+
+    </script>
+        <div class="xx">x</div>
+		<div class="login-wrapper" id="loginWrapper" style="display: block; min-height: initial;">
+        <section class="avatar-wrapper" id="avatarWrapper">
+        <!-- 头像 -->
+        <!--<img src="img/default-avatar_2x.png" onerror="this.src='/images/weibo/signin/default-avatar_2x.png';">-->
+    </section>
+    <form>
+        <section class="box">
+            <div class="input-wrapper">
+                <i class="icon-forName"></i>
+                <!-- 用户名 -->
+                <p class="input-box">
+                    <input type="text" placeholder="邮箱/手机号" id="loginName">
+                    <!-- 清除用户名小叉 -->
+                    <a href="javascript:;" class="input-clear" id="loginnameclear" style="display:none"></a>
+                </p>
+            </div>
+            <div class="input-wrapper">
+                <i class="icon-forPwd"></i>
+                <p class="input-box"><input type="password" placeholder="请输入密码" id="loginPassword"></p>
+            </div>
+        </section>
+
+        <!-- 要隐藏添加 hid -->
+        <div id="verifyCodeWrapper" style="display:none">
+            <p class="vcode">
+                <img src="" alt="" id="verifyCodeImage">
+                <a href="javascript:;" id="changeVerifyCode">换一张</a>
+            </p>
+
+            <!-- 要隐藏添加 hid -->
+            <div class="box">
+                <input type="text" placeholder="请输入验证码" id="loginVCode">
+            </div>
+        </div>
+
+        <!-- 要隐藏添加 hid -->
+        <div id="dVerifyCodeWrapper" style="display:none">
+            <p class="shield-tit">动态码</p>
+
+            <!-- 要隐藏添加 hid -->
+            <div class="box">
+                <input type="text" name="shieldCode" placeholder="请输入微盾动态码" id="loginDVCode">
+            </div>
+        </div>
+        <div id="errorMsg" class="error-label" >账号或者密码不正确，请重新输入</div>
+        <a href="javascript:;" class="btn btnRed" id="loginAction">登录</a>
+    </form>
+        <p class="label">
+    <a href="https://passport.weibo.cn/signin/other?r=https%3A%2F%2Fm.weibo.cn%2F">第三方帐号</a>
+    </p>
+    <footer class="footer">
+        <a href="zhuce.html">注册帐号</a>
+        <a href="https://passport.weibo.cn/forgot/forgot?entry=wapsso&amp;from=0&amp;r=https%3A%2F%2Fm.weibo.cn%2F">忘记密码</a>
+    </footer>
+        </div>
+	</body>
+</html>

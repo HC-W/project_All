@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我的微博</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="login_shouye.css">
+    <style>
+        .bj{
+            width: 100%;
+            height: 736px;
+            background: rgba(0,0,0,.6);
+            position: absolute;
+        }
+
+        .main{
+            text-align: center;
+        }
+        .wei{
+            margin-top: 120px;
+        }
+        .tiyan{
+            margin-top: 140px;
+            display: block;
+            text-decoration: none;
+            color: #5184bc;
+            font-size: 14px;
+        }
+        .mid a{
+            display: inline-block;
+            text-decoration: none;
+            padding: 9px 76px;
+            border-radius: 3px;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+        .denglu{
+            color: #666666;
+            border: 1px solid #cccccc;
+
+        }
+        .zhuce{
+            background-color:#ff8200;
+            color: white;
+            border: 1px solid #ff8200;
+            margin-right: 10px;
+        }
+        .bot span{
+            margin-left: 10px;
+        }
+        .bot{
+            margin: 0 14px;
+            display: flex;
+            border: 1px solid #0079fe;
+            color: #0079fe;
+            padding: 10px 115px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .bj2{
+            width: 100%;
+            height: 736px;
+            background: rgba(0,0,0,.6);
+            display: none;
+            position: fixed;
+            top: 0;
+        }
+        .content{
+            width: 281px;
+            height: 382px;
+            position: fixed;
+            z-index: 99999;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            -moz-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            -o-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            background-color: white;
+            box-shadow: 0 0 4px rgba(0,0,0,.12);
+            padding: 0 .875rem 1rem .875rem;
+            border-radius: .3125rem;
+            color: #333;
+            padding-top: 8px;
+        }
+        .huadong>ul>li{
+            list-style: none;
+            padding:7px;
+        }
+        .bj_section>ul:nth-child(1)>li{
+            padding: 10px;
+        }
+        .hudong>ul>li>a{
+            color: black;
+            display: block;
+            height: 2.25rem;
+            line-height: 2.25rem;
+            /*margin: .1875rem -.3125rem;*/
+            /*padding:10px;*/
+            font-size: 14px;
+        }
+        .shehzi{
+            text-decoration: none;
+            color: #333333;
+
+        }
+        .m-checkbox span {
+            box-sizing: border-box;
+            display: inline-block;
+            border: 1px solid #ccc;
+            background: #fff;
+            width: 1.125em;
+            height: 1.125em;
+            line-height: 1.125em;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+            vertical-align: middle;
+            display: none;
+        }
+        input[type=checkbox] {
+            display: block;
+            width: 20px;
+            height:20px;
+            position: absolute;
+            right: 0;
+            /*top:0;*/
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            border: 1px solid white;
+            margin-top: 22px;
+        }
+        .m-pop.m-pop-lt section li{
+            position: relative;
+        }
+        .m-pop.m-pop-lt section li .m-checkbox span {
+            opacity: 0;
+
+        }
+        .huadong{
+            height: 246px;
+            overflow: hidden;
+        }
+        .m-btm-btns m-box{
+            overflow: hidden;
+        }
+        .m-btm-btns .m-box-col {
+            margin-right: .625rem;
+
+        }
+        .m-box-col {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            display: block;
+            min-width: 0;
+            float: left;
+        }
+        .m-btm-btns a {
+
+            text-decoration: none;
+        }
+
+        .m-btn-white {
+            color: #787878;
+            background: #fff;
+            border: 1px solid #ccc;
+        }
+        .m-btn {
+            text-align: center;
+            line-height: 2.5rem;
+            height: 2.5rem;
+            font-size: .875rem;
+            border-radius: .1875rem;
+            outline: 0;
+            display: inline-block;
+            min-width: 4.375rem;
+            padding: 0 27px;
+        }
+        .m-btn-white.m-btn-text-orange {
+            color: #FF8200;
+            border-color: #FF8200;
+        }
+        .huadong{
+
+        }
+        .gp-list{
+            position: relative;
+        }
+        .bj_section{
+            /*margin-top: 20px;*/
+        }
+        .m-pop m-pop-lt>p{
+            margin-top: 8px;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="header_top">
+        <div class="logo"></div>
+        <div class="search">
+            <div></div>
+            <input type="text" placeholder="大家都在搜：幼儿园">
+        </div>
+        <div class="email">
+            <a href="javascript:void(0)"></a>
+        </div>
+        <div class="publish">
+            <a href="faBu.html"></a>
+        </div>
+    </div>
+    <nav class="header_nav">
+        <div class="ul">
+            <ul>
+                <li>
+                    <span>关注</span>
+                    <div></div>
+                </li>
+                <li>
+                    <span>热门</span>
+                    <div></div>
+                </li>
+                <li>
+                    <span>搞笑</span>
+                    <div></div>
+                </li>
+                <li>
+                    <span>情感</span>
+                    <div></div>
+                </li>
+                <li>
+                    <span>明星</span>
+                    <div></div>
+                </li>
+                <li>
+                    <span>社会</span>
+                    <div></div>
+                </li>
+                <li>
+                    <span>数码</span>
+                    <div></div>
+                </li>
+                <li>
+                    <span>体育</span>
+                    <div></div>
+                </li>
+                <li>
+                    <span>汽车</span>
+                    <div></div>
+                </li>
+                <li>
+                    <span>电影</span>
+                    <div></div>
+                </li>
+                <li>
+                    <span>游戏</span>
+                    <div></div>
+                </li>
+            </ul>
+        </div>
+        <div class="more"></div>
+    </nav>
+</header>
+<section>
+    <div id="guanZhu"></div>
+    <div id="hot"></div>
+    <div id="funny"></div>
+    <div id="emotion"></div>
+    <div id="star"></div>
+    <div id="social"></div>
+    <div id="digital"></div>
+    <div id="sport"></div>
+    <div id="car"></div>
+    <div id="movie"></div>
+    <div id="game"></div>
+</section>
+<div class="bj2">
+    <div class="content">
+        <div class="m-pop m-pop-lt">
+            <p>选择分组</p>
+            <div class="bj_section">
+                <ul>
+                    <li>
+                        <a href="###" class="shehzi">设置备注</a>
+                    </li>
+                </ul>
+                <div class="huadong">
+                    <ul class="gp-list">
+                        <li>
+                            <label class="m-checkbox">
+                                特别关注
+                                <input type="checkbox" true-value="true">
+                                <span>
+              		<i class="m-font m-font-check">
+              		</i>
+              	</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label  ontouchstart="" class="m-checkbox">
+                                高校
+                                <input  type="checkbox" true-value="true">
+                                <span><i class="m-font m-font-check">
+
+              	</i>
+              	</span>
+                            </label>
+                        </li>
+                        <li><label ontouchstart="" class="m-checkbox">
+                            吃货
+                            <input  type="checkbox" true-value="true">
+                            <span>
+              		<i class="m-font m-font-check">
+
+              		</i></span></label></li>
+                        <li>
+                            <label class="m-checkbox">
+                                媒体
+                                <input type="checkbox" true-value="true"> <span><i class="m-font m-font-check"></i></span></label>
+                        </li>
+                        <li><label class="m-checkbox">
+                            哲理
+                            <input type="checkbox" true-value="true">
+                            <span><i class="m-font m-font-check"></i>
+
+              	</span></label></li>
+                        <li><label class="m-checkbox">
+                            摄影
+                            <input type="checkbox" true-value="true">
+                            <span><i class="m-font m-font-check"></i></span></label></li>
+                        <li><label class="m-checkbox">
+                            明星
+                            <input type="checkbox" true-value="true">
+                            <span><i class="m-font m-font-check"></i></span></label></li>
+                        <li><label class="m-checkbox">
+                            设计
+                            <input  type="checkbox" true-value="true">
+                            <span><i class="m-font m-font-check"></i></span></label></li>
+                        <li><label class="m-checkbox">
+                            美妆
+                            <input  type="checkbox" true-value="true">
+                            <span><i class="m-font m-font-check"></i></span></label></li>
+                        <li><label  ontouchstart="" class="m-checkbox">
+                            时尚
+                            <input  type="checkbox" true-value="true">
+                            <span><i class="m-font m-font-check"></i></span></label></li>
+                        <li><label  ontouchstart="" class="m-checkbox">
+                            小说
+                            <input  type="checkbox" true-value="true">
+                            <span><i class="m-font m-font-check"></i></span></label></li>
+                        <li><label ontouchstart="" class="m-checkbox">
+                            搞笑
+                            <input  type="checkbox" true-value="true">
+                            <span><i class="m-font m-font-check"></i></span></label></li>
+                        <li><label ontouchstart="" class="m-checkbox">
+                            育儿
+                            <input  type="checkbox" true-value="true">
+                            <span><i  class="m-font m-font-check"></i></span></label></li>
+                        <li><label ontouchstart="" class="m-checkbox">
+                            同事
+                            <input type="checkbox" true-value="true">
+                            <span><i  class="m-font m-font-check"></i></span></label></li>
+                        <li><label  ontouchstart="" class="m-checkbox">
+                            名人明星
+                            <input  type="checkbox" true-value="true">
+                            <span><i class="m-font m-font-check"></i></span></label></li>
+                        <li><label  ontouchstart="" class="m-checkbox">
+                            同学
+                            <input  type="checkbox" true-value="true">
+                            <span><i class="m-font m-font-check"></i></span></label></li>
+                        <li>
+                            <a ontouchstart=""><i class="m-font m-font-plus"></i>新建分组</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <footer class="m-btm-btns m-box">
+                <div class="m-box-col">
+                    <a href="##" class="m-btn m-btn-white m-btn-text-black">暂不分组</a>
+                </div>
+                <div class="m-box-col">
+                    <a href="##" class="m-btn m-btn-white m-btn-text-orange">确定</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+<script src="jq/jquery-3.2.1.min.js"></script>
+<script src="jq/zepto.min.js"></script>
+<script src="jq/zepto.touch.js"></script>
+<script src="login_shouye.js"></script>
+<script>
+    $(function () {
+        $(".huadong").on("touchmove",function(e){
+            var touch = e.originalEvent.targetTouches[0];
+            var start = touch.pageY;
+
+            var scrollTop=$(".gp-list").scrollTop();
+            scrollTop=-start;
+            $(".gp-list").css("top",scrollTop+"px");
+        });
+        $(".m-btn").on("tap",function () {
+            $(".bj2").hide();
+        });
+
+    })
+</script>
+</body>
+</html>

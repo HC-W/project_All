@@ -1,0 +1,112 @@
+.weiBo_div{
+	background-color: #F2F2F2;
+}
+.weiBo_divs{
+	width: 88%;
+	margin: 10px auto;
+}
+.weiBo_divTop{
+	border-bottom: 1px solid #E7E7E7;
+}
+.weiBo_divTop>span{
+	display: block;
+	background: url('../img/zhuce/2.png') no-repeat -34px -40px;
+	width: 189px;
+	height: 54px;
+	margin: 20px auto;
+}
+.weiBo_divCenter{
+	position: relative;
+	border-bottom: 1px solid #E7E7E7;
+	cursor: pointer;
+}
+.weiBo_divCenter>span{
+	display: inline-block;
+}
+.weiBo_divCenter_bg{
+	background: url('../img/zhuce/2.png') no-repeat 0 -472px;
+	width: 260px;
+	height: 140px;
+	margin: 0px auto;
+}
+.weiBo_divCenter_left,.weiBo_divCenter_right{
+	position: absolute;
+}
+.weiBo_divCenter_left{
+	background: url('../img/zhuce/2.png') no-repeat -29px -371px;
+	width: 85px;
+	height: 20px;
+	left: 25px;
+	bottom: 20px;
+	z-index: 6;
+}
+.weiBo_divCenter_right{
+	background: url('../img/zhuce/2.png') no-repeat -144px -371px;
+	width: 93px;
+	height: 20px;
+	right: 10px;
+	bottom: 20px;
+	z-index: 6;
+}
+.weiBo_divBottom_friend{
+	font-size: 14px;
+	color: #5C5C5C;
+	padding: 15px 0;
+	border-bottom: 2px solid white;
+}
+.weiBo_divBottom_spS{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 8px 0 8px;
+}
+.weiBo_divBottom_spS>span{
+	display: inline-block;
+}
+.weiBo_divBottom_spS>span:nth-child(1){
+	width: 80%;
+	font-size: 12px;
+	color: #999999;
+}
+.weiBo_divBottom_spS>span:nth-child(2){
+	background: url('../img/zhuce/2.png') no-repeat 0 0;
+	width: 24px;
+	height: 24px;
+}
+.weiBo_form>input{
+	width: 100%;
+	height: 32px;
+	font-size: 14px;
+	border: 0;
+	margin: 3px;
+}
+.weiBo_form>input::-webkit-input-placeholder{
+	color: #999999;
+	font-size: 13px;
+}
+.weiBo_form .eM_yanZheng{
+	font-size: 13px;
+	color: #FC5D7B;
+	margin: 5px 0;
+}
+.weiBo_form_btn{
+	margin-top: 8px;
+	overflow: hidden;
+}
+.weiBo_form_btn>a{
+	text-decoration: none;
+	font-size: 12px;
+	color: #4cbdcc;
+	float: left;
+}
+.weiBo_form_btn>input{
+	display: inline-block;
+	float: right;
+	width: 96px;
+	height: 32px;
+	background-color: #4ABDCC;
+	font-size: 14px;
+	color: white;
+	border: 0;
+	cursor: pointer;
+}

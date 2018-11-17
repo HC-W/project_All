@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+</head>
+<link rel="stylesheet" href="shouYe.css">
+<link rel="stylesheet" href="style.css">
+<style>
+    .login-btn{
+        position: fixed;
+        bottom:200px;
+        left:33%;
+        background-color: #1b9af4;
+        color: hsla(0,0%,100%,.9);
+        box-shadow: 0 6px 30px 0 rgba(52,96,183,.28);
+        width: 25%;
+        text-align: center;
+        padding: 0.5rem;
+        border-radius: 20px;
+    }
+    .login-btn>a{
+        display: block;
+        text-decoration: none;
+        color: white;
+
+    }
+</style>
+<body>
+<script src="jquery-3.2.1.min.js"></script>
+<script src="zepto.min.js"></script>
+<script src="zepto.touch.js"></script>
+<script src="shouYe.js"></script>
+    <div class="login-btn">
+        <a href="loginShou.html">登录/注册</a>
+    </div>
+    <div class="main">
+        <div class="title">
+            <img src="img/2.jpg" alt="" class="img1">
+            <form action="">
+                <input type="text" placeholder="大家都在搜：胡先煦经纪人">
+                <img src="img/3.png" alt="" class="img2">
+            </form>
+            <img src="img/1.png" alt="" class="img3">
+        </div>
+        <div class="tou">
+            <div class="tit">
+                <div class="aa">
+                    <a href="#" class="a1">热门<div></div></a>
+                    <a href="#" class="a2">搞笑<div></div></a>
+                    <a href="#" class="a2">情感<div></div></a>
+                    <a href="#" class="a2">明星<div></div></a>
+                    <a href="#" class="a2">社会<div></div></a>
+                    <a href="#" class="a2">数码<div></div></a>
+                    <a href="#" class="a2">体育<div></div></a>
+                    <a href="#" class="a2">汽车<div></div></a>
+                    <a href="#" class="a2">电影<div></div></a>
+                    <a href="#" class="a2">游戏<div></div></a>
+                </div>
+            </div>
+            <img src="img/s1.png" alt="" class="img4">
+        </div>
+        <div class="mb">
+            <a href="#">热门 </a>
+            <a href="#">搞笑</a>
+            <a href="#">情感</a>
+            <a href="#">明星</a>
+            <a href="#">社会</a>
+            <a href="#">数码</a>
+            <a href="#">体育</a>
+            <a href="#">汽车</a>
+            <a href="#">电影</a>
+            <a href="#">游戏</a>
+        </div>
+    </div>
+
+   <div class="middle">
+       <div class="hot"></div>
+        <div class="funny"></div>
+        <div class="emotion"></div>
+       <div class="star"></div>
+       <div class="social"></div>
+       <div class="digital"></div>
+       <div class="sport"></div>
+       <div class="car"></div>
+       <div class="movie"></div>
+       <div class="game"></div>
+   </div>
+<script>
+        $(function () {
+            var arr=[];
+            $(window).on("scroll",function () {
+                var scrolls = $(window).scrollTop();//获取当前可视区域距离页面顶端的距离
+                arr.push(scrolls);
+                var last=arr[arr.length-1];
+                var last2=arr[arr.length-2];
+                if(last>last2){
+                    $(".login-btn").hide();
+                }else {
+                    $(".login-btn").show();
+                }
+            });
+            //点击发布
+            $(".img3").on("tap",function () {
+                location.href="login.html";
+            })
+            //点击社会
+            $(".aa a").eq(4).on("tap",function () {
+                $(".aa").css("margin-left","-40px")
+            });
+            //点击数码
+            $(".aa a").eq(5).on("tap",function () {
+                $(".aa").css("margin-left","-100px")
+            });
+            //点击体育
+            $(".aa a").eq(6).on("tap",function () {
+                $(".aa").css("margin-left","-160px")
+            });
+            //点击汽车
+            $(".aa a").eq(7).on("tap",function () {
+                $(".aa").css("margin-left","-220px")
+            });
+            //点击明星
+            $(".aa a").eq(3).on("tap",function () {
+                $(".aa").css("margin-left","0px")
+            });
+            //点击下三角显示隐藏切换
+            $(".mb a").eq(0).css("color","#ff8200");
+            $(".mb").hide();
+            $(".img4").on("tap",function () {
+                $(".mb").toggle();
+            })
+            //点击模板里面的标题
+            $(".mb a").on("tap",function () {
+                $(".mb").hide();
+                // $(".middle>div").hide()
+                $(".middle>div").eq($(this).index()).show();
+            })
+            //点击热门颜色改变。显示div
+            $(".a2 div").hide();
+            //手指事件
+            $.ajax({
+                type:"GET",
+                url:"shouYe.php",
+                dataType:"json",
+                data:{
+                    sn:"hot"
+                },
+                success:function (res) {
+                    res.forEach(function (item) {
+                        var newRes=
+                            "<div class='newDiv,wrap'>" +
+                                "<div class='d_" +
+                            "title'>" +
+                                     "<img src='"+item["touxiang"]+"' alt='' class='dt_img1'>" +
+                                "<div class='t_left'>" +
+                                '<p>'+item["name"]+
+                                     "<img src='img/5.png' alt=''>"+
+                                '</p>' +
+                                '<p>'+item["time"]+'</p>'+
+                                "</div>" +
+                                "<div class='guanzhu'>+ 关注</div>" +
+                                "</div>" +
+                                "<p class='pTitle'>"+item["title"]+'</p>' +
+                                "<div class='imgs'>" +
+                                    "<img src='"+item["img_1"]+"' alt='' class='dt_img1'>" +
+                                    "<img src='"+item["img_2"]+"' alt='' class='dt_img1'>" +
+                                    "<img src='"+item["img_3"]+"' alt='' class='dt_img1'>" +
+                                    "<img src='"+item["img_4"]+"' alt='' class='dt_img1'>" +
+                                "</div>"+
+                            "<div class='wrap_skr'>" +
+                            "<p class='zan'>" +
+                            "<img src='imgs/skr.png' alt=''>" +
+                            "<span>"+item["zan"]+"</span>"+
+                            "</p>" +
+                            "<p class='cai'>" +
+                            "<img src='imgs/cai.png' alt=''>" +
+                            "<span>" +item["cai"]+"</span>"+
+                            "</p>"+
+                            "</div>"+
+                            "</div>";
+                        $(".hot")[0].innerHTML+=newRes;
+                        //点击关注弹出登录
+                        $(".guanzhu").on("tap",function () {
+                            location.href="loginShou.html";
+                        })
+                    })
+                }
+            })
+            $(".middle>div").hide();
+            $(".hot").show();
+            $(".aa a,.mb>a").on("tap",function () {
+                //字的颜色变回原样
+                $(".aa a").css("color","");
+                $(".aa .a1").css("color","#999999");
+                $(".mb a").css("color","");
+                $(".aa a div").hide();
+                $(".mb").hide();
+                //点谁谁变
+                $(".mb a").eq($(this).index()).css("color","#ff8200");
+                $(".aa a").eq($(this).index()).css("color","black");
+                $(".aa a div").eq($(this).index()).show();
+                //点击title切换
+                $(".middle>div").hide();
+                $(".middle>div").eq($(this).index()).show();
+                $_this=this;
+                //发送请求
+                $.ajax({
+                    type:"GET",
+                    url:"shouYe.php",
+                    dataType:"json",
+                    data:{
+                      sn:$(".middle>div").eq($(this).index()).attr("class")
+                    },
+                    success:function (res) {
+                        res.forEach(function (item) {
+                            var newRes=
+                                "<div class='newDiv,wrap'>" +
+                                    "<div class='d_title'>" +
+                                        "<img src='"+item["touxiang"]+"' alt='' class='dt_img1'>" +
+                                         "<div class='t_left'>" +
+                                             '<p>'+item["name"]+
+                                                "<img src='img/5.png' alt=''>"+
+                                             '</p>' +
+                                             '<p>'+item["time"]+'</p>'+
+                                         "</div>" +
+                                         "<div class='guanzhu'>+ 关注</div>" +
+                                    "</div>" +
+                                    "<p class='pTitle'>"+item["title"]+'</p>' +
+                                    "<div class='imgs'>" +
+                                        "<img src='"+item["img_1"]+"' alt='' class='dt_img1'>" +
+                                        "<img src='"+item["img_2"]+"' alt='' class='dt_img1'>" +
+                                        "<img src='"+item["img_3"]+"' alt='' class='dt_img1'>" +
+                                        "<img src='"+item["img_4"]+"' alt='' class='dt_img1'>" +
+                                    "</div>"+
+                                "<div class='wrap_skr'>" +
+                                "<p class='zan'>" +
+                                "<img src='imgs/skr.png' alt=''>" +
+                                "<span>"+item["zan"]+"</span>"+
+                                "</p>" +
+                                "<p class='cai'>" +
+                                "<img src='imgs/cai.png' alt=''>" +
+                                "<span>" +item["cai"]+"</span>"+
+                                "</p>"+
+                                "</div>"+
+                                "</div>";
+                            $(".middle>div").eq($($_this).index())[0].innerHTML+=newRes;
+                            //点击关注弹出登录
+                            $(".guanzhu").on("tap",function () {
+                                location.href="loginShou.html";
+                                // console.log(111)
+                            })
+                        })
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>

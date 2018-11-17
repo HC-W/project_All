@@ -1,0 +1,151 @@
+.wangzhan{
+	width: 100%;
+	background-color: #000000;
+}
+.center_top{
+	width: 1140px;
+	margin: 0 auto;
+	padding: 120px 0 30px;
+}
+h1{
+	font-family:FangSong,NSimSun;
+	font-size: 60px;
+	color: #4983E1;
+	font-weight: lighter;
+	text-align: center;
+}
+.cp_zi{
+	font-size: 22px;
+	color: #FFFFFF;
+	text-align: center;
+}
+.center_tu{
+	width: 1130px;
+	margin: 45px auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;	
+}
+.tu1{
+	box-sizing: border-box;
+	margin-bottom: 30px;
+}
+.tu1 .tu_img>img{
+	width: 363px;
+	height: 217px;
+}
+.tu1 .tu_img{
+	position: relative;
+	line-height: 0;
+}
+.tu1 .tu_img>p{
+	background-color: #428BCA;
+	color: white;
+	font-size: 12px;
+	padding: 10px 6px;
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	border-radius: 3px;
+}
+.tu1 .tu_img .tu_bg{
+	width: 100%;
+	height: 100%;
+	line-height: normal;
+	text-align: center;
+	background-color: rgba(46,86,122,0.9);
+	padding: 45px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	box-sizing: border-box;
+}
+.tu1 .tu_img:hover .tu_bg{
+	display: block;
+	transition: all 2s linear 0s;
+}
+.tu1 .tu_img .tu_bg img{
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+}
+.tu1 .tu_img .tu_bg p{
+	color: white;
+	font-size: 12px;
+	margin: 10px 0;
+}
+.tu1 .tu_img .tu_bg p a{
+	color: white;
+	text-decoration: none;
+}
+.tu1 .tu_img .tu_bg>a{
+	text-decoration: none;
+	font-size: 12px;
+	color: white;
+	padding: 8px 35px;
+	background-color: #F1AD4E;
+	border-radius: 5px;
+}
+.tu1 .tu_zi{
+	padding: 10px;
+}
+.tu1 .tu_zi>p{
+	color: #EBEBEB;
+	font-size: 14px;
+	margin-bottom: 8px;
+}
+.tu1 .tu_zi div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.tu1 .tu_zi div p{
+	font-size: 14px;
+	font-weight: bold;
+	color: #F0AD4E;
+}
+.tu1 .tu_zi div .free{
+	color: #12D4FF;
+}
+.tu1 .tu_zi div a{
+	font-size: 14px;
+	padding: 5px;
+	color: white;
+	text-decoration: none;
+	background-color: #428BCA;
+}
+.tu1:hover{
+	box-shadow: 0 3px 50px 1px #383838;
+	transform: translateY(-2px);
+}
+.center_yuan{
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom:100px ;
+}
+.center_yuan a{
+	font-size: 12px;
+	text-decoration: none;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+}
+.center_yuan .yuan1{
+	background-color: #E6E6E6;
+	margin-right: 5px;
+}
+.center_yuan .yuan1:hover{
+	color: white;
+	background-color: #428BCB;
+}
+.center_yuan .yuan2{
+	background-color: #B5B5B5;
+	color: white;
+}
+.center_yuan .yuan2:hover{
+	color: black;
+	background-color: #E6E6E6;
+}
+

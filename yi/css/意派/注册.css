@@ -1,0 +1,106 @@
+.center_lo{
+	width: 1100px;
+	margin: 0px auto;
+	padding: 110px 0 200px 0;
+}
+.center_main{
+	display: flex;
+	justify-content: space-between;
+}
+h1{
+	font-family:FangSong,NSimSun;
+	font-size: 60px;
+	color: #4983E1;
+	font-weight: lighter;
+	margin-bottom: 13px;
+}
+.zhu{
+	font-size: 22px;
+	color: #FFFFFF;
+	margin-bottom: 25px;
+}
+form p{
+	color: #CCC8C8;
+	font-size: 14px;
+	
+	margin: 7px 0;
+}
+form>input{
+	width: 520px;
+	padding: 12px 13px;
+	background-color: #575757;
+	border-width: 0;
+	outline: none;
+	box-sizing: border-box;
+
+}
+form>input:hover{
+	outline: none;
+}
+form div{
+	display: flex;
+	box-sizing: border-box;
+}
+form>div input{
+	width: 100px;
+	padding: 12px 10px;
+	background-color: #575757;
+	border-width: 0;
+	outline: none;
+	margin-right: 20px;
+	box-sizing: border-box;
+}
+form>div img{
+	height: 39px;
+}
+.center_main form .xieyi a{
+	display: inline-block;
+	color: #C9C9C9;
+	text-decoration: none;
+	margin: 10px 0;
+}
+.center_main form .xieyi a span{
+	color: #FF8814;
+}
+.center_main form .sub{
+	justify-content: space-between;
+}
+.center_main form  .sub>input{
+	width: 120px;
+	height: 40px;
+	text-align: center;
+	border-width: 0;
+	color: white;
+	border-radius: 5px;
+}
+.center_main .sub .in1{
+	background-color: #4984E4;
+}
+.center_main .sub .in1:hover{
+	background-color: #046EBD;
+}
+.center_main .sub .in2{
+	background-color: #9E9A9A;
+}
+.center_main .sub .in2:hover{
+	background-color:#085095;
+}
+
+.center_main>div{
+	width: 504px;
+	height: 53px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 30px;
+	background-color: #676767;
+	border-radius:5px ;
+	box-sizing: border-box;
+}
+.center_main>div a{
+	font-size: 17px;
+	color: white;
+	text-decoration: none;
+	box-sizing: border-box;
+}

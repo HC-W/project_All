@@ -1,0 +1,325 @@
+.image{
+	background-image: url(../img/yipai/ren.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.bg{
+	background-color: rgba(118,117,116,0.8);
+}
+.image_main{
+	width: 1140px;
+	margin: 0 auto;
+	padding-top: 150px;
+}
+.image_main img{
+	width: 100%;
+	-webkit-animation: img 1s linear 1 forwards;
+	-o-animation: img 1s linear 1 forwards;
+	animation: img 1s linear 1 forwards;
+}
+.image_main_top{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.image_main_top h1{
+	font-size: 40px;
+	color: #FFFFFF;
+	margin-bottom: 20px;
+	font-weight: lighter;
+	letter-spacing: 5px;
+}
+.image_main_top p{
+	font-size: 24px;
+	color: #FFFFFF;
+	margin-bottom: 20px;
+}
+.image_main_top .p_a{
+	text-align: center;
+	padding: 13px 0;
+	width: 300px;
+	margin: 0 auto;
+	background-color: #4A86E8;
+	border-radius: 5px;
+}
+.image_main_top .p_a a{
+	display: block;
+	color: #CACACA;
+	width: 100%;
+	font-size: 15px;
+	text-decoration: none;
+	/*border: 1px solid red;*/
+}
+
+
+.div2,.div6{
+	background-color: #222222;
+}
+.div2_main{
+	width: 1170px;
+	margin: 0 auto;
+	padding: 60px 0 170px;
+}
+.div2_p1{
+	text-align: center;
+	margin-bottom: 60px;
+	-webkit-animation: img 1s linear 2s 1 forwards;
+	-o-animation: img 1s linear 2s 1 forwards;
+	animation: img 1s linear 2s 1 forwards;
+}
+.div2_p1 .d2p1_cai{
+	font-size: 78px;
+	font-weight: 900;
+	background: -webkit-linear-gradient(#4316C1,#B11A88);
+	-webkit-background-clip: text;
+	color: transparent;
+	margin-bottom: 20px;
+	
+}
+.div2_p1 .d2p1_bai{
+	width: 700px;
+	line-height: 0s 1.8em;
+	letter-spacing: 2px;
+	margin: 0 auto;
+	color: white;
+	opacity: 0.9;
+	font-size: 17px;
+}
+.div2_p2,.d4ct,.d5ct{
+	display: flex;
+	margin-bottom: 60px;
+}
+.d6ct{
+	flex-wrap: wrap;
+}
+.d6ct>div>img{
+	width: 100px;
+}
+.div2_p2>div,.d4ct>div,.d5ct>div{
+	width: 390px;
+	height: 270px;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 30px 10px 0;
+}
+.div4_main .d4ct>div{
+	height: 210px;
+	padding: 20px 20px 10px;
+}
+.div4_main .d5ct>div{
+	height: 239px;
+	padding: 20px 20px 10px;
+}
+.div6_main .d5ct>div{
+	height: 222px;
+	padding: 8px 20px 0;
+	margin-bottom: 50px;
+}
+.div2_p2>div p,.d4ct>div p,.d5ct>div p:nth-of-type(1){
+	font-size: 17px;
+	color: #E6E9EE;
+	margin: 8px 0;
+}
+.div2_p2>div p,.d4ct>div p:nth-of-type(2){
+	color: #DAD5D5;
+	font-size: 13px;
+	line-height: 1.8em;
+}
+.d5ct>div p:nth-of-type(2){
+	font-size: 17px;
+	color: #E6E9EE;
+	margin: 8px 0;
+}
+.d5ct>div p:nth-of-type(3){
+	color: #DAD5D5;
+	font-size: 13px;
+	line-height: 1.8em;
+}
+.div2_p2 .d2p2_a{
+	background-color: black;
+}
+.div2_p2 .d2p2_b{
+	background-color: #4A86E8;
+}
+.div2_p2 .d2p2_c{
+	background-color: #196FAD;
+}
+
+.div2_p3{
+	width: 730px;
+	margin: 0 auto;
+	text-align: center;
+}
+.div3_p,.div4_p{
+	width: 730px;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 50px;
+}
+.div2_p3 h1,.div3_p h1,.div4_p h1{
+	font-size: 50px;
+	color: #4781DF;
+	margin-bottom: 5px;
+	font-weight: lighter;
+	letter-spacing: 5px;
+}
+.div2_p3 p,.div3_p p,.div4_p p:nth-of-type(1),.div2_p3 p,.div3_p p,.div4_p p:nth-of-type(2){
+	font-size: 24px;
+	color: #E8E8E8;
+	margin-bottom: 5px;
+}
+.div2_p3 p,.div3_p p,.div4_p p:nth-of-type(3){
+	font-size: 14px;
+	color: white;
+	opacity: 0.7;
+	line-height: 1.7em;
+	letter-spacing: 1px;
+}
+.div3{
+	background-color: #000000;
+	position: relative;
+}
+.div3_main{
+	text-align: center;
+	width: 1170px;
+	margin: 0 auto;
+	padding: 454px 0 0;
+}
+.div3_main img{
+	width: 100%;
+	-webkit-animation: left 1s linear 0s 1 forwards;
+	-o-animation: left 1s linear 0s 1 forwards;
+	animation: left 1s linear 0s 1 forwards;
+}
+.div3>img{
+	width: 100%;
+	position: absolute;
+	left:0;
+	top: -120px;
+	-webkit-animation: piao 1s linear 2s 1 forwards;
+	-o-animation: piao 1s linear 2s 1 forwards;
+	animation: piao 1s linear 1s 1 forwards;
+	opacity: 0;
+}
+
+.div4_main,.div6_main{
+	text-align: center;
+	width: 1170px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+.div6_main{
+	padding: 100px 0 30px;
+}
+.div4_p .d4p_p{
+	margin-top: 20px;
+	text-align: center;
+}
+.div4_p .d4p_p>p{
+	font-size: 14px;
+	color: white;
+	opacity: 0.7;
+	line-height: 1.4em;
+	letter-spacing: 1px;
+}
+.d4ct>div>piao{
+	border-radius: 50%;
+}
+.div4_bottom{
+	text-align: center;
+}
+.div4_bottom a{
+	text-align: center;
+	padding: 15px 90px;
+	font-size: 14px;
+	color: white;
+	opacity: 0.7;
+	background-color: #4A86E8;
+	border-radius: 4px;
+	text-decoration: none;
+}
+.div5{
+	background-color: #000000;
+}
+.div7{
+	background-image: url(../img/yipai/shan.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.div7_main{
+	text-align: center;
+	width: 730px;
+	margin: 0 auto;
+	padding: 150px 0 150px;
+}
+.d7_bottom{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.d7_bottom a{
+	display: inline-block;
+	/*border: 1px solid red;*/
+	
+}
+.d7_bottom .logoa{
+	border-right: 1px solid #6E6E6E;
+	padding: 20px 15px;
+}
+.d7_bottom .logob{
+	padding: 15px 15px 10px;
+}
+.d7_bottom .logoa img{
+	width: 140px;
+}
+.d7_bottom .logob img{
+	width: 180px;
+}
+@-webkit-keyframes img{
+	from{
+		-webkit-transform: translateY(10px);
+		-moz-transform: translateY(10px);
+		-ms-transform: translateY(10px);
+		-o-transform: translateY(10px);
+		transform: translateY(10px);
+		opacity: 0;
+	}
+	to{
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@-webkit-keyframes piao{
+	0%{
+		opacity: 0;
+	}
+	50{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@-webkit-keyframes left{
+	from{
+		-webkit-transform: translate(-10px, 0);
+		-moz-transform: translate(-10px, 0);
+		-ms-transform: translate(-10px, 0);
+		-o-transform: translate(-10px, 0);
+		transform: translate(-10px, 0);
+		opacity: 0;
+	}
+	to{
+		-webkit-transform: translate(0, 0);
+		-moz-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+		-o-transform: translate(0, 0);
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+}

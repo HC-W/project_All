@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+    <title>Title</title>
+    <link rel="stylesheet" href="loginShou.css">
+</head>
+<body>
+<script src="jquery-3.2.1.min.js"></script>
+<script src="zepto.min.js"></script>
+<script src="zepto.touch.js"></script>
+<script>
+    $(function () {
+        $(".zhuce").on("tap",function () {
+            location.href="zhuce.html";
+        })
+        $(".denglu").on("tap",function () {
+            location.href="login.html";
+        })
+    })
+
+</script>
+    <div class="main">
+        <img src="img/wei1.png" alt="" class="wei">
+        <a href="#" class="tiyan">体验微博客户端>></a>
+        <div class="mid">
+             <a href="#" class="zhuce">注册</a>
+            <a href="#" class="denglu">登录</a>
+        </div>
+        <div class="bot">
+            <img src="img/qq.jpg" alt="">
+            <span>使用QQ号码登录</span>
+        </div>
+    </div>
+</body>
+</html>

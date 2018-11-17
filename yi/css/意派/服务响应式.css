@@ -1,0 +1,78 @@
+@media only screen and (max-width:1200px){
+	.center_top{
+		width: 930px;
+	}
+	.tu{
+		width: 930px;
+	}
+	.santu_a{
+		width: 455px;
+	}
+}
+@media only screen and (min-width:768px) and (max-width:992px){
+	.center_top{
+		width: 730px;
+	}
+	.tu{
+		width: 730px;
+	}
+	.santu_a{
+		width: 350px;
+	}
+	.a_top .yuan{
+		margin-right: 15px;
+		height: 70px;
+		border-radius: 50%;
+		}
+	.a_top .xiang{
+		margin-right: 15px;
+		height: 70px;
+		border-radius: 15px;
+	}
+	.a_top .fang{
+		margin-right: 25px;
+		height: 70px;
+		border-radius: 15px;
+	}
+
+}
+@media only screen and (max-width:767px){
+	.center_top{
+		/*295*/
+		width: 82%;
+		padding-top: 70px;
+		padding-bottom: 100px;
+		text-align: left;
+		margin: 0 auto;
+	}
+	.center_top h1{
+		font-size: 45px;
+		width: 40%;
+
+	}
+	.tu{
+		/*335*/
+		width: 89.33333333333333%;
+	}
+	.santu_a{
+		width: 100%;
+	}
+	.center_bottom{
+		height: 850px;
+	}
+	.a_top .yuan{
+		margin-right: 15px;
+		height: 70px;
+		border-radius: 50%;
+		}
+	.a_top .xiang{
+		margin-right: 15px;
+		height: 70px;
+		border-radius: 15px;
+	}
+	.a_top .fang{
+		margin-right: 25px;
+		height: 70px;
+		border-radius: 15px;
+	}
+}

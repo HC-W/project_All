@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body，html{
+            height: 100%;
+        }
+        body{
+            font:inherit;
+            vertical-align: baseline;
+            outline: none;
+        }
+        .main{
+            background-color: #EDEDED;
+            height: 736px;
+        }
+        .zhuce{
+            display: flex;
+            border-bottom: 1px solid #ccc;
+            padding: 8px;
+            background-color: #F9F9F9;
+        }
+        .zhuce span{
+            margin-left: 141px;
+            font-size: 18px;
+            color: #333333;
+        }
+        .zhu_t{
+            padding: 5px 0;
+            display: flex;
+        }
+        .zhu_t div{
+            border: 1px solid #666666;
+            padding: 5px 72px;
+            font-size: 14px;
+        }
+        .zhu1{
+            margin-left: 5px;
+           border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+        .zhu2{
+            background-color:#848484;
+            color: white;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .youxiang p{
+            color: #333;
+            font-size: 12px;
+            padding: 10px;
+        }
+        .youxiang input::-webkit-input-placeholder{
+            font-size: 15px;
+            color: #cccccc;
+        }
+        .youxiang input{
+            border: 0;
+            width: 100%;
+            padding: 15px 10px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+        .yincang{
+            position: relative;
+        }
+        .yincang div{
+            background-color: #f4f4f4;
+            color: #717981;
+            position: absolute;
+            right: 8px;
+            top: 7px;
+            padding: 5px;
+        }
+
+        .liji{
+            border: 1px solid #ff8200;
+            background-color: #ff8200;
+            color: white;
+            width: 95%;
+            padding: 12px 0;
+            margin: 20px 0;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+        .che{
+            width: 42px;
+            height: 21px;
+            border: 1px solid #ccc;
+        }
+        .bott{
+            display: flex;
+        }
+        .wen p{
+            color: #828282;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .wen p span{
+            color: #507daf;
+        }
+        .xianshi{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<script src="jquery-3.2.1.min.js"></script>
+<script src="zepto.min.js"></script>
+<script src="zepto.touch.js"></script>
+<script>
+    $(function () {
+        //点击回到登陆注册首页
+        $(".dianji").on("tap",function () {
+            location.href="loginShou.html";
+        });
+        $(".yincang>div").on("tap",function () {
+            $(".yincang>input").attr("type","password");
+            $(".y-yincang").hide();
+            $(".xianshi").show();
+        });
+        $(".xianshi").on("tap",function () {
+            $(".yincang>input").attr("type","text");
+            $(".y-yincang").show();
+            $(".xianshi").hide();
+        })
+        $(".liji").on("tap",function () {
+            $.ajax({
+                type: "POST",
+                url: "zhuce.php",
+                dataType: "json",
+                data: {
+                    emailAddress: $(".email").val(),
+                    pass: $(".pwd").val(),
+                    nicheng: $(".nicheng").val(),
+                },
+                success: function (res) {
+                    console.log(res)
+                    if(res){
+                        for(var i in res["data"]){
+                            sessionStorage[i] = res["data"][i];
+                        }
+                        location.href = "main.html";
+                    }
+                }
+            });
+        })
+    })
+</script>
+    <div class="zhuce">
+        <img src="img/jian.png" alt="" class="dianji">
+        <span>注册</span>
+    </div>
+    <div class="main">
+        <div class="zhu_t">
+            <div class="zhu1">手机注册</div>
+            <div class="zhu2">邮箱注册</div>
+        </div>
+        <div class="youxiang">
+            <p>登录名</p>
+            <input type="text" placeholder="常用邮箱地址" class="email">
+            <p>设置密码</p>
+            <div class="yincang">
+                <input type="text" class="pwd" placeholder="6-16位数字或字母，区分大小写">
+                <div class="y-yincang">隐藏</div>
+                <div class="xianshi">显示</div>
+            </div>
+
+            <p>昵称</p>
+            <input class="nicheng" type="text" placeholder="4-24位字符：支持中文、英文、数组、“-”">
+
+        </div>
+        <input type="submit" value="立即注册" class="liji" >
+        <div class="bott">
+             <input type="checkbox" class="che" checked="checked">
+            <div class="wen">
+                <p>已阅读并同意</p>
+                <p><span>微博服务使用协议</span>及<span>微博个人信息保护政策</span></p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

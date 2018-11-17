@@ -1,0 +1,60 @@
+.zhuCe_email{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.zhuCe_email>a{
+	text-decoration: none;
+	color: #4AC2D8;
+}
+.login_login{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	border: none;
+}
+.zhuCe_zhuce{
+	height: 32px;
+	margin-right: 10px;
+	border: none;
+}
+.forget{
+	color: #4ABDCC;
+	font-size: 14px;
+	text-decoration: none;
+}
+.four_tuAll>p{
+	font-size: 12px;
+	color: #999999;
+	text-align: center;
+}
+.four_tuAll>div{
+	width: 80%;
+	margin: 15px auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.four_tuAll>div>a{
+	display: inline-block;
+}
+.four_tuAll>div>a:nth-child(1){
+	background: url(../img/zhuce/3.png) no-repeat -90px -231px;
+	width: 22px;
+	height: 19px;
+}
+.four_tuAll>div>a:nth-child(2){
+	background: url(../img/zhuce/3.png) no-repeat -10px -231px;
+	width: 22px;
+	height: 18px;
+}
+.four_tuAll>div>a:nth-child(3){
+	background: url(../img/zhuce/3.png) no-repeat -70px -230px;
+	width: 18px;
+	height: 18px;
+}
+.four_tuAll>div>a:nth-child(4){
+	background: url(../img/zhuce/3.png) no-repeat -33px -230px;
+	width: 16px;
+	height: 20px;
+}

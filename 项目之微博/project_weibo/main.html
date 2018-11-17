@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.2.1.min.js"></script>
+    <style>
+        .btn{
+            display: block;
+            width: 200px;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px;
+            background-color: #7c7c7c;
+            box-shadow: 0 0 5px 5px #CCCCCC;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+        <!--<a href="login.html">请点击前往登录页面</a>-->
+<script>
+    document.write("恭喜您，注册成功");
+    var btn=document.createElement("a");
+    btn.setAttribute("class","btn");
+    btn.innerHTML="请前往登录页面！";
+    btn.href="login.html";
+    document.body.appendChild(btn);
+</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+.secWrap{
+	width: 68%;
+	overflow: hidden;
+	margin: 20px auto;
+}
+.s_left{
+	width: 68%;
+	float: left;
+}
+.s_left_top{
+	font-size: 20px;
+	color: #5C5C5C;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #EAEAEA;
+}
+.s_left_bottom{
+	margin-top: 20px;
+	overflow: hidden;
+}
+.s_left_bleft{
+	width: 42%;
+	float: left;
+	background-color: #F7F7F7;
+}
+.s_left_bleft_all{
+	width: 90%;
+	margin: 10px auto;
+}
+.chuanJian{
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+.chuanJian>p:nth-child(1){
+	float: left;
+	color: #5C5C5C;
+	font-size: 15px;
+}
+.chuanJian>p:nth-child(2){
+	float: right;
+}
+.chuanJian>p:nth-child(2)>span{
+	font-size: 14px;
+	color: #999999;
+}
+.chuanJian>p:nth-child(2)>a{
+	color: #4AC2D8;
+	font-size: 14px;
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: 600;
+}
+.chuanJian>p:nth-child(2)>a:hover{
+	color: #2D9DAB;
+}
+.zhuCe_form a:hover{
+	color: #2D9DAB;
+}
+.zhuCe_form{
+	border-top: 1px solid #EAEAEA;
+}
+.zhuCe_form>p{
+	margin-top: 8px;
+	font-size: 13px;
+	color: #999999;
+}
+.zhuCe_form .p2{
+	margin-top: 0px;
+	font-size: 13px;
+	color: #FC5D7B;
+}
+.zhuCe_form>input{
+	width: 100%;
+	height: 32px;
+	border: none;
+	margin-top: 5px;
+	background-color: #EAEAEA;
+}
+.zhuCe_form>div{
+	margin: 10px 0;
+	overflow: hidden;
+	width: 100%;
+}
+.zhuCe_form .yanZhengMa{
+	height: 32px;
+	border: none;
+	background-color: #EAEAEA;
+}
+.zhuCe_form .yanImg{
+	height: 32px;
+}
+.zhuCe_sever>a{
+	text-decoration: none;
+	color: #4ABDCC;
+}
+.zhuCe_form .zhuCe_zhuce{
+	width: 40%;
+	background-color: #4ABDCC;
+	color: white;
+	font-size: 17px;
+	padding-left: 0;
+	text-align: center;
+	cursor: pointer;
+}
+.zhuCe_form .zhuCe_zhuce:hover{
+	background-color: #2E9DAB;
+}
+.s_left_bright{
+	width: 44%;
+	float: right;
+}
+.middleP{
+	font-size: 14px;
+	color: #999999;
+	letter-spacing: 1px;
+}
+.s_left_bright>div{
+	padding: 15px 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.s_left_bright>div>span{
+	display: inline-block;
+}
+.s_left_bright>div>span:nth-child(2){
+	font-size: 12px;
+	color: #5C5C5C;
+	margin-left: 10px;
+}
+.middle2{
+	border-bottom: 1px solid #F7F7F7;
+	border-top: 1px solid #F7F7F7;
+}
+.middle1>span:nth-child(1){
+	background: url('../img/zhuce/3.png') no-repeat 0 0;
+	width: 60px;
+	height: 52px;
+}
+.middle2>span:nth-child(1){
+	background: url('../img/zhuce/3.png') no-repeat 0px -83px;
+	width: 60px;
+	height: 52px;
+}
+.middle3>span:nth-child(1){
+	background: url('../img/zhuce/3.png') no-repeat 0px -165px;
+	width: 60px;
+	height: 52px;
+}
+.s_right{
+	width: 29%;
+	float: right;
+}

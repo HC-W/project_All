@@ -1,0 +1,134 @@
+//导航栏鼠标移动的颜色变化
+$(".join").css("color","#168AA8");
+$("header .nav .ul_one>li>a").on("mouseover",function(){
+	$(this).aHover();
+})
+$("header .nav .ul_one>li>a").on("mouseout",function(){
+	$(this).aFinish();
+})
+//jq函数声明
+$.fn.extend({
+	aHover:function(){
+		$(this).css({
+			"background-color":"#2E9DAB",
+			"color":"white"
+		});
+		$(".logo").css("background-color","");
+		$(".join").css("color","#168AA8");
+	},
+	aFinish:function(){
+		$(this).css({
+			"background-color":"rgba(78,190,203,.8)",
+			"color":"white"
+		});
+		$(".logo").css("background-color","");
+		$(".join").css("color","#168AA8");
+	}
+});
+
+$(".sheZhao").show();
+$(".xuan_p3_span1").css("color","#999999");
+$(".allP_shiChang").show();
+$(".allP_yanFa").hide();
+$(".allP_sheJi").hide();
+$(".sheZhao_shiChang").css("color","#999999");
+$(".yingJieSheng").hide();
+$(".shiXiSheng").hide();
+
+$(".xuan_p3_span1").on("click",function(){
+	$(".sheZhao").show();
+	$(".yingJieSheng").hide();
+	$(".shiXiSheng").hide();
+	$(".allP_shiChang").show();
+	$(".allP_yanFa").hide();
+	$(".allP_sheJi").hide();
+	$(".xuan_p3_span1").css("color","#999999");
+	$(".xuan_p3_span2").css("color","");
+	$(".xuan_p3_span3").css("color","");
+})
+$(".xuan_p3_span2").on("click",function(){
+	$(".sheZhao").hide();
+	$(".yingJieSheng").show();
+	$(".shiXiSheng").hide();
+	$(".allP_yJ_shiChang").show();
+	$(".allP_chanPin").hide();
+	$(".allP_yJ_yunYing").hide();
+	$(".xuan_p3_span1").css("color","");
+	$(".xuan_p3_span2").css("color","#999999");
+	$(".xuan_p3_span3").css("color","");
+	$(".yingJie_shiChang").css("color","#999999");
+})
+$(".xuan_p3_span3").on("click",function(){
+	$(".sheZhao").hide();
+	$(".yingJieSheng").hide();
+	$(".shiXiSheng").show();
+	$(".allP_shiXi_yunYing").hide();
+	$(".allP_renLi").show();
+	$(".xuan_p3_span1").css("color","");
+	$(".xuan_p3_span2").css("color","");
+	$(".xuan_p3_span3").css("color","#999999");
+	$(".renLi").css("color","#999999");
+})
+
+$(".sheZhao_shiChang").on("click",function(){
+	$(".allP_shiChang").show();
+	$(".allP_yanFa").hide();
+	$(".allP_sheJi").hide();
+	$(".sheZhao_shiChang").css("color","#999999");
+	$(".yanFa").css("color","");
+	$(".sheJi").css("color","");
+});
+$(".yanFa").on("click",function(){
+	$(".allP_shiChang").hide();
+	$(".allP_yanFa").show();
+	$(".allP_sheJi").hide();
+	$(".yanFa").css("color","#999999");
+	$(".sheZhao_shiChang").css("color","");
+	$(".sheJi").css("color","");
+});
+$(".sheJi").on("click",function(){
+	$(".allP_shiChang").hide();
+	$(".allP_yanFa").hide();
+	$(".allP_sheJi").show();
+	$(".sheJi").css("color","#999999");
+	$(".sheZhao_shiChang").css("color","");
+	$(".yanFa").css("color","");
+});
+
+$(".yingJie_shiChang").on("click",function(){
+	$(".allP_yJ_shiChang").show();
+	$(".allP_chanPin").hide();
+	$(".allP_yJ_yunYing").hide();
+	$(".yingJie_shiChang").css("color","#999999");
+	$(".chanPin").css("color","");
+	$(".yingJie_yunYing").css("color","");
+});
+$(".chanPin").on("click",function(){
+	$(".allP_yJ_shiChang").hide();
+	$(".allP_chanPin").show();
+	$(".allP_yJ_yunYing").hide();
+	$(".chanPin").css("color","#999999");
+	$(".yingJie_shiChang").css("color","");
+	$(".yingJie_yunYing").css("color","");
+});
+$(".yingJie_yunYing").on("click",function(){
+	$(".allP_yJ_shiChang").hide();
+	$(".allP_chanPin").hide();
+	$(".allP_yJ_yunYing").show();
+	$(".yingJie_yunYing").css("color","#999999");
+	$(".yingJie_shiChang").css("color","");
+	$(".chanPin").css("color","");
+});
+
+$(".renLi").on("click",function(){
+	$(".allP_shiXi_yunYing").hide();
+	$(".allP_renLi").show();
+	$(".renLi").css("color","#999999");
+	$(".shiXi_yunYing").css("color","");
+});
+$(".shiXi_yunYing").on("click",function(){
+	$(".allP_shiXi_yunYing").show();
+	$(".allP_renLi").hide();
+	$(".renLi").css("color","");
+	$(".shiXi_yunYing").css("color","#999999");
+});
